@@ -2,11 +2,11 @@ import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
 body {
-  background-color: black;
-  color: grey;
+  
+  ${'' /* background-color: #c3c3c3; */}
 }
 @font-face {
-  font-family: bitter;
+  font-family: Bitter;
   src: url(/fonts/Bitter-VariableFont_wght.woff2);
 }
 @font-face {

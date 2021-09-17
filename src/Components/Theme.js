@@ -1,4 +1,4 @@
 export default {
-  fontFamilySecondary: "'Bitter', serif",
+  fontFamilyHeading: "'Bitter', serif",
   fontFamilyPrimary: "'Montserrat', sans-serif",
 };

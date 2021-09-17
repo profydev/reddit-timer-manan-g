@@ -12,8 +12,8 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Header />
       <Router>
+        <Header />
         <Switch>
           <Route exact path="/">
             <Home />
@@ -21,12 +21,12 @@ function App() {
           <Route exact path="/app">
             <Reddit />
           </Route>
-          <Route>
-            404 - Not Found
-          </Route>
+          <Route path="/howitworks">How It Works</Route>
+          <Route path="/about">About</Route>
+          <Route>404 - Not Found</Route>
         </Switch>
+        <Footer />
       </Router>
-      <Footer />
     </ThemeProvider>
   );
 }
