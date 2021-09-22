@@ -6,15 +6,15 @@ const StyledHeaderLinks = styled(Link)`
   font-family: ${(props) => props.theme.fontFamilyPrimary};
   font-weight: normal;
   text-decoration: none;
-  color: #636363;
+  color: ${(props) => props.theme.color.midDark};
   margin: 0 15px;
 `;
 
 const HeaderLinks = () => (
   <div>
-    <StyledHeaderLinks to="/app">Search</StyledHeaderLinks>
-    <StyledHeaderLinks to="/howitworks">How it works</StyledHeaderLinks>
-    <StyledHeaderLinks to="/about">About</StyledHeaderLinks>
+    <StyledHeaderLinks to="/search/javascript">Search</StyledHeaderLinks>
+    <StyledHeaderLinks to="/#how-it-works">How it works</StyledHeaderLinks>
+    <StyledHeaderLinks to="/#about">About</StyledHeaderLinks>
   </div>
 );
 

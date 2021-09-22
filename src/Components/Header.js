@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import HeaderLinks from './HeaderLinks';
 import HeaderLogo from './HeaderLogo';
 
-const HeaderWrapper = styled.div`
+const HeaderWrapper = styled.header`
 font-family: ${(props) => (props.theme.fontFamilyHeading)};
 font-weight: bold;
 height: 100px;

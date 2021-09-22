@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-function Info({ children }) {
-  return <div>{children}</div>;
+function Info({ children, id }) {
+  return <div id={id}>{children}</div>;
 }
 
 Info.propTypes = {
   children: PropTypes.node.isRequired,
+  id: PropTypes.string.isRequired,
 };
 
 export default Info;
