@@ -23,7 +23,7 @@ const setup = (InitialPath = '/') => {
 
 test('navigates to home page when logo is clicked', () => {
   setup('/search/javascript');
-  const logoLink = screen.getByRole('link', { name: /logo/i });
+  const logoLink = screen.getByRole('link', { name: /header-logo/i });
   userEvent.click(logoLink);
   expect(screen.getByText(/home page/i)).toBeInTheDocument();
 });
