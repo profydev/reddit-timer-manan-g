@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function reddit() {
+export default function Reddit() {
   return (
     <div>
       Reddit

@@ -5,6 +5,9 @@ import { Link } from 'react-router-dom';
 const StyledHeaderLogo = styled.img`
   height: 36px;
   width: 150px;
+  @media only screen and (max-width: 768px) {
+    margin: 15px auto;
+  }
 `;
 
 const HeaderLogo = () => (

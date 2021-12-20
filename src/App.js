@@ -31,6 +31,8 @@ function App() {
         </Route>
         <Route>404 - Not Found</Route>
       </Switch>
+      {/* eslint-disable-next-line */}
+      {/* <a id="nav-screen-overlay" href="#" target="_self" aria-label="overlay for screen"></a> */}
       <Footer />
     </ThemeProvider>
   );
