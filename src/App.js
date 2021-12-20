@@ -17,13 +17,22 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route exact path="/#how-it-works">How It Works</Route>
-        <Route exact path="/#about">About</Route>
+        <Route exact path="/#how-it-works">
+          How It Works
+        </Route>
+        <Route exact path="/#about">
+          About
+        </Route>
+        <Route exact path="/terms">
+          terms-privacy
+        </Route>
         <Route path="/search">
           <Reddit />
         </Route>
         <Route>404 - Not Found</Route>
       </Switch>
+      {/* eslint-disable-next-line */}
+      {/* <a id="nav-screen-overlay" href="#" target="_self" aria-label="overlay for screen"></a> */}
       <Footer />
     </ThemeProvider>
   );
