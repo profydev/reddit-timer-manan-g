@@ -8,6 +8,7 @@ const StyledHeaderLinks = styled(Link)`
   text-decoration: none;
   color: ${(props) => props.theme.color.midDark};
   margin: 0 15px;
+  font-size: 16px;
 `;
 
 const HeaderLinks = () => (
