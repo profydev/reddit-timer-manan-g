@@ -25,7 +25,7 @@ test('navigates to home page when logo is clicked', () => {
   setup('/search/javascript');
   const logoLink = screen.getByRole('link', { name: /header-logo/i });
   userEvent.click(logoLink);
-  expect(screen.getByText(/home page/i)).toBeInTheDocument();
+  expect(screen.getByText(/No reactions to your reddit posts?/i)).toBeInTheDocument();
 });
 
 test('navigates to search page when search link is clicked', () => {
@@ -43,6 +43,6 @@ test.each([
   const regularEx = new RegExp(hashLink, 'i');
   const hLink = screen.getByRole('link', { name: regularEx });
   userEvent.click(hLink);
-  expect(screen.getByText(/home page/i)).toBeInTheDocument();
+  expect(screen.getByText(/No reactions to your reddit posts?/i)).toBeInTheDocument();
   expect(history.location.hash).toBe(`#${hash}`);
 });
