@@ -5,6 +5,8 @@ import axios from 'axios';
 export default function Reddit() {
   const params = useParams();
   const [query, setQuery] = useState(params ? params.query : 'javascript');
+  const [title, setTitle] = useState();
+  const [error, setError] = useState();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -12,9 +14,9 @@ export default function Reddit() {
       const result = await axios.get(
         'https://www.reddit.com/r/javascript/new.json',
       );
-      console.log(result.data.data.children[0].data.title);
+      setTitle(result.data.data.children[0].data.title);
     } catch (err) {
-      console.log(err);
+      setError(err);
     }
   };
 
@@ -32,9 +34,9 @@ export default function Reddit() {
             signal: controller.signal,
           },
         );
-        console.log(result.data.data.children[0].data.title);
+        setTitle(result.data.data.children[0].data.title);
       } catch (e) {
-        console.log(e);
+        setError(e);
       }
     };
     runAsync();
@@ -49,6 +51,8 @@ export default function Reddit() {
       <form onSubmit={handleSubmit}>
         <input onChange={handleChange} value={query} />
       </form>
+      {title}
+      {error}
     </div>
   );
 }
