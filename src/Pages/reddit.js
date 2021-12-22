@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+import { defaultQuery } from '../Util';
 
 export default function Reddit() {
   const params = useParams();
@@ -12,7 +13,7 @@ export default function Reddit() {
     e.preventDefault();
     try {
       const result = await axios.get(
-        'https://www.reddit.com/r/javascript/new.json',
+        `https://www.reddit.com/r/${query}/new.json`,
       );
       setTitle(result.data.data.children[0].data.title);
     } catch (err) {
@@ -29,7 +30,7 @@ export default function Reddit() {
     const runAsync = async () => {
       try {
         const result = await axios.get(
-          'https://www.reddit.com/r/javascript/new.json',
+          `https://www.reddit.com/r/${defaultQuery}/new.json`,
           {
             signal: controller.signal,
           },
