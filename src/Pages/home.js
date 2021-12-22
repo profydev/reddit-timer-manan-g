@@ -69,7 +69,7 @@ export default function Home() {
         ))}
       </Info>
       <Info heading="How it works" id="how-it-works">
-        This app was created during a course on profy.dev with the goal to
+        This app was created during a course on <a href='https://profy.dev'>profy.dev</a> with the goal to
         implement a pixel-perfect real-world application with professional
         workflows and tools like Kanban, Asana, Zeplin, GitHub, pull requests
         and code reviews.
