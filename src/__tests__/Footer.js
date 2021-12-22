@@ -29,7 +29,7 @@ test('navigates to home page when logo is clicked', () => {
 });
 
 test('navigates to profy.dev when profy.dev is clicked', () => {
-  setup();
+  setup('/search/javascript');
   const profyLink = screen.getByRole('link', { name: /profy.dev/i });
   expect(profyLink).toHaveAttribute('href', 'https://profy.dev/employers');
 });
