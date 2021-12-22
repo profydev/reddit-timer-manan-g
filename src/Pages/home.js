@@ -58,7 +58,7 @@ export default function Home() {
       </Link>
       <SubStyledTitle>r/javascript</SubStyledTitle>
       <Link
-        style={{ width: '70%', margin: '30px 0px' }}
+        style={{ width: '70%', margin: '30px 0px 40px' }}
         to={`/search/javascript${defaultQuery}`}
       >
         <StyledIMG src="/table.png" alt="table" />

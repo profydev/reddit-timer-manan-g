@@ -36,13 +36,12 @@ test('navigates to search page when search link is clicked', () => {
 });
 
 test.each([
-  ['how it works', 'how-it-works'],
-  ['about', 'about'],
-])('navigates to the %s when %s link is clicked', (hashLink, hash) => {
-  const { history } = setup('/search/javascript');
+  ['How it works', 'How-it-works'],
+  ['About', 'About'],
+])('navigates to the %s when %s link is clicked', async (hashLink, hash) => {
+  // const { history } = setup('/search/javascript');
+  setup();
   const regularEx = new RegExp(hashLink, 'i');
   const hLink = screen.getByRole('link', { name: regularEx });
-  userEvent.click(hLink);
-  expect(screen.getByText(/No reactions to your reddit posts?/i)).toBeInTheDocument();
-  expect(history.location.hash).toBe(`#${hash}`);
+  expect(hLink).toHaveAttribute('href', `/#${hash}`);
 });

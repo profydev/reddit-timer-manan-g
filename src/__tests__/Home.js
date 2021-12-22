@@ -34,3 +34,9 @@ test('navigates to search page when img is clicked', () => {
   userEvent.click(imgLink);
   expect(screen.getByText(/reddit/i)).toBeInTheDocument();
 });
+
+test('navigates to profy.dev when more info is clicked', () => {
+  setup();
+  const profyLink = screen.getByRole('link', { name: /Click here/i });
+  expect(profyLink).toHaveAttribute('href', 'https://profy.dev/employers');
+});
