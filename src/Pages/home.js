@@ -63,12 +63,12 @@ export default function Home() {
       >
         <StyledIMG src="/table.png" alt="table" />
       </Link>
-      <Info heading="About" id="About">
+      <Info heading="About" id="about">
         {listitems.map((item) => (
           <li key={uuidv4()}>{item}</li>
         ))}
       </Info>
-      <Info heading="How it works" id="How-it-works">
+      <Info heading="How it works" id="how-it-works">
         This app was created during a course on profy.dev with the goal to
         implement a pixel-perfect real-world application with professional
         workflows and tools like Kanban, Asana, Zeplin, GitHub, pull requests

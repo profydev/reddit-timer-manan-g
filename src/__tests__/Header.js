@@ -36,8 +36,8 @@ test('navigates to search page when search link is clicked', () => {
 });
 
 test.each([
-  ['How it works', 'How-it-works'],
-  ['About', 'About'],
+  ['How it works', 'how-it-works'],
+  ['About', 'about'],
 ])('navigates to the %s when %s link is clicked', async (hashLink, hash) => {
   // const { history } = setup('/search/javascript');
   setup();

@@ -17,10 +17,10 @@ const HeaderLinks = () => (
     <StyledHeaderLinks to={`/search/${defaultQuery}`}>
       Search
     </StyledHeaderLinks>
-    <StyledHeaderLinks as="a" href="/#How-it-works">
+    <StyledHeaderLinks as="a" href="/#how-it-works">
       How it works
     </StyledHeaderLinks>
-    <StyledHeaderLinks as="a" href="/#About">
+    <StyledHeaderLinks as="a" href="/#about">
       About
     </StyledHeaderLinks>
   </div>
