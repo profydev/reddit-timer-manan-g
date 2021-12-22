@@ -25,7 +25,7 @@ test('navigates to home page when logo is clicked', () => {
   setup();
   const logoLink = screen.getByRole('link', { name: /footer-logo/i });
   userEvent.click(logoLink);
-  expect(screen.getByText(/home page/i)).toBeInTheDocument();
+  expect(screen.getByText(/No reactions to your reddit posts?/i)).toBeInTheDocument();
 });
 
 test('navigates to profy.dev when profy.dev is clicked', () => {

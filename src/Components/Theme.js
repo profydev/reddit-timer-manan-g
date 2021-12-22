@@ -7,5 +7,6 @@ export default {
     midDark: '#636363',
     midLight: '#d5d5d5',
     light: '#ffffff',
+    orange: '#FDB755',
   },
 };
