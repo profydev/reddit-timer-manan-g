@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter, Route } from 'react-router-dom';
 import App from '../App';
@@ -30,7 +30,8 @@ test('navigates to home page when logo is clicked', () => {
 
 test('navigates to profy.dev when profy.dev is clicked', () => {
   setup('/search/javascript');
-  const profyLink = screen.getByRole('link', { name: /profy.dev/i });
+  const footer = screen.getByRole('contentinfo');
+  const profyLink = within(footer).getByRole('link', { name: /profy.dev/i });
   expect(profyLink).toHaveAttribute('href', 'https://profy.dev/employers');
 });
 

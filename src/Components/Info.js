@@ -9,7 +9,7 @@ const StyledHeading = styled.h2`
   margin-bottom: 15px;
 `;
 
-const StyledSection = styled.div`
+const StyledSection = styled.article`
   margin-bottom: 30px;
   width: 60%;
 `;
@@ -19,7 +19,7 @@ const StyledPara = styled.p`
 
 function Info({ children, heading, id }) {
   return (
-    <StyledSection>
+    <StyledSection id={id}>
       <StyledHeading id={id}>{heading}</StyledHeading>
       <StyledPara>{children}</StyledPara>
     </StyledSection>
