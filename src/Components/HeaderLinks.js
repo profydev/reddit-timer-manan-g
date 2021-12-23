@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { defaultQuery } from '../Util';
 
 const StyledHeaderLinks = styled(Link)`
   font-family: ${(props) => props.theme.fontFamilyPrimary};
@@ -13,9 +14,15 @@ const StyledHeaderLinks = styled(Link)`
 
 const HeaderLinks = () => (
   <div>
-    <StyledHeaderLinks to="/search/javascript">Search</StyledHeaderLinks>
-    <StyledHeaderLinks to="/#how-it-works">How it works</StyledHeaderLinks>
-    <StyledHeaderLinks to="/#about">About</StyledHeaderLinks>
+    <StyledHeaderLinks to={`/search/${defaultQuery}`}>
+      Search
+    </StyledHeaderLinks>
+    <StyledHeaderLinks as="a" href="/#how-it-works">
+      How it works
+    </StyledHeaderLinks>
+    <StyledHeaderLinks as="a" href="/#about">
+      About
+    </StyledHeaderLinks>
   </div>
 );
 
