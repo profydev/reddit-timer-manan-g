@@ -32,7 +32,7 @@ test('navigates to search page when search link is clicked', () => {
   setup();
   const searchLink = screen.getByRole('link', { name: /search/i });
   userEvent.click(searchLink);
-  expect(screen.getByText(/reddit/i)).toBeInTheDocument();
+  expect(screen.getByText(/Find the best time for a subreddit/i)).toBeInTheDocument();
 });
 
 test.each([
