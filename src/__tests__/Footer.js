@@ -22,7 +22,7 @@ const setup = (InitialPath = '/') => {
 };
 
 test('navigates to home page when logo is clicked', () => {
-  setup();
+  setup('/search/javascript');
   const logoLink = screen.getByRole('link', { name: /footer-logo/i });
   userEvent.click(logoLink);
   expect(screen.getByText(/No reactions to your reddit posts?/i)).toBeInTheDocument();

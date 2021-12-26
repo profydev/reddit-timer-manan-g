@@ -25,14 +25,14 @@ test('navigates to search page when button is clicked', () => {
   setup();
   const buttonLink = screen.getByRole('link', { name: /SHOW ME THE BEST TIME/i });
   userEvent.click(buttonLink);
-  expect(screen.getByText(/reddit/i)).toBeInTheDocument();
+  expect(screen.getByText(/Find the best time for a subreddit/i)).toBeInTheDocument();
 });
 
 test('navigates to search page when img is clicked', () => {
   setup();
   const imgLink = screen.getByRole('link', { name: /table/i });
   userEvent.click(imgLink);
-  expect(screen.getByText(/reddit/i)).toBeInTheDocument();
+  expect(screen.getByText(/Find the best time for a subreddit/i)).toBeInTheDocument();
 });
 
 test('navigates to profy.dev when more info is clicked', () => {

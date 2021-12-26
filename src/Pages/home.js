@@ -52,14 +52,14 @@ export default function Home() {
       </SubStyledTitle>
       <Link
         style={{ margin: '40px 0px' }}
-        to={`/search/javascript${defaultQuery}`}
+        to={`/search/${defaultQuery}`}
       >
         <StyledButton>SHOW ME THE BEST TIME</StyledButton>
       </Link>
       <SubStyledTitle>r/javascript</SubStyledTitle>
       <Link
         style={{ width: '70%', margin: '30px 0px 40px' }}
-        to={`/search/javascript${defaultQuery}`}
+        to={`/search/${defaultQuery}`}
       >
         <StyledIMG src="/table.png" alt="table" />
       </Link>
