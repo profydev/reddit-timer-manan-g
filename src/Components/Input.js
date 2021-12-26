@@ -81,7 +81,7 @@ function Input({ setPosts }) {
         if (!isCancelled) setPosts(result.data.data.children);
       } catch (e) {
         if (!isCancelled) {
-          console.log(e);
+          // console.log(e);
           setError(e);
         }
       }
